@@ -3,7 +3,7 @@ services:
     name: rentas-hammocks
     env: python
     schedule: "0 13 * * *" 
-    buildCommand: pip install -r requirements.txt && playwright install chromium --with-deps
+    buildCommand: "pip install -r requirements.txt && playwright install chromium"
     startCommand: python fb_rent_scraper.py
     envVars:
       - key: PYTHON_VERSION
