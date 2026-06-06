@@ -110,7 +110,7 @@ def search_rentals():
                 price_txt = next((l for l in lines if '$' in l), None)
                 if not price_txt: continue
                 price = int(''.join(filter(str.isdigit, price_txt)))
-                title = lines[1] if lines[0] == price_txt and len(lineas) > 1 else lines[0]
+                title = lines[1] if lines[0] == price_txt and len(lines) > 1 else lines[0]
                 location = next((l for l in lines if ", FL" in l), "Location not specified")
 
                 if is_new(listing_id):
