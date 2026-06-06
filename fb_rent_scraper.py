@@ -97,13 +97,20 @@ if __name__ == "__main__":
     init_db()
     nuevos = buscar_rentas()
     
+if __name__ == "__main__":
+    init_db()
+    nuevos = buscar_rentas()
+    
     if nuevos:
-        msg = f"🏠 *{len(nuevos)} Rentas nuevas - The Hammocks*\n"
-        msg += f"Filtros: $1200-$1900 | 2 cuartos | 25 millas\n\n"
+        # Ahora el mensaje reflejará exactamente tus variables de configuración
+        msg = f"🏠 *{len(nuevos)} Rentas nuevas - {LOCATION.capitalize()}*\n"
+        msg += f"Filtros: ${MIN_PRICE}-${MAX_PRICE} | {BEDROOMS} cuarto(s) | {RADIUS} millas\n\n"
+        
         for r in nuevos[:8]:
             msg += f"💰 *${r['precio']}*\n{r['titulo']}\n[Ver en Facebook]({r['link']})\n\n"
+            
         if len(nuevos) > 8:
             msg += f"...y {len(nuevos)-8} más"
         enviar_telegram(msg)
     else:
-        enviar_telegram("✅ Sin rentas nuevas hoy en The Hammocks ($1200-$1900)")
+        enviar_telegram(f"✅ Sin rentas nuevas hoy en {LOCATION.capitalize()} (${MIN_PRICE}-${MAX_PRICE})")
