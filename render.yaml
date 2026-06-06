@@ -1,13 +1,13 @@
 services:
-    type: cron
+  - type: cron
     name: rentas-hammocks
     env: python
     schedule: "0 13 * *"  # 8:00am Miami = 13:00 UTC
     buildCommand: pip install -r requirements.txt && playwright install chromium --with-deps
     startCommand: python fb_rent_scraper.py
     envVars:
-            - key: TOKEN
+      - key: TOKEN
         value: 8828207901:AAGLALCvQ0lagsrl7m6qcDfiIWXruiL2Xsw
-            - key: CHAT_ID
+      - key: CHAT_ID
         value: 6456127410
     autoDeploy: false
