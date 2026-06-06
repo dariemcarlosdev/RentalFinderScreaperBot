@@ -1,5 +1,5 @@
 services:
-    - type: cron
+    type: cron
     name: rentas-hammocks
     env: python
     schedule: "0 13 * *"  # 8:00am Miami = 13:00 UTC
