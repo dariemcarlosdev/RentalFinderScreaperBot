@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 DB = "rentas.db"
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
-LOCATION = "Tamiami"
+LOCATION = "Tamiami, FL"
 RADIUS = 25
 MIN_PRICE = 1200
 MAX_PRICE = 1900
