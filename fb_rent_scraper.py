@@ -50,7 +50,7 @@ def save(listing_id, title, price, link):
     conn.commit()
     conn.close()
 
-ef search_rentals():
+def search_rentals():
     new_listings = []
     with sync_playwright() as p:
         # 🌐 A MUST FOR RENDER: headless=True
