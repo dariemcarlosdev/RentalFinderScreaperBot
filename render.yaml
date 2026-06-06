@@ -3,8 +3,8 @@ services:
     name: fb-rent-scraper
     env: python
     schedule: "0 12 * * *" # Hora UTC (12:00 UTC = 8:00 AM EST)
-    buildCommand: "pip install -r requirements.txt && playwright install chromium && playwright install-deps"
+    buildCommand: "pip install -r requirements.txt && playwright install chromium"
     startCommand: "python fb_rent_scraper.py"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.0
+        value: 3.11.9
