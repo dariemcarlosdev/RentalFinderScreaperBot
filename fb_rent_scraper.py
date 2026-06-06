@@ -3,8 +3,8 @@ from playwright.sync_api import sync_playwright
 
 # CONFIG
 DB = "rentas.db"
-TOKEN = "8828207901:AAGLALCvQ0lagsrl7m6qcDfiIWXruiL2Xsw" 
-CHAT_ID = "6456127410"
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
+CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 LOCATION = "miami"
 RADIUS = 25
 MIN_PRICE = 1200
