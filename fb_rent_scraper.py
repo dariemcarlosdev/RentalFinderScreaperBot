@@ -97,10 +97,6 @@ if __name__ == "__main__":
     init_db()
     nuevos = buscar_rentas()
     
-if __name__ == "__main__":
-    init_db()
-    nuevos = buscar_rentas()
-    
     if nuevos:
         # Ahora el mensaje reflejará exactamente tus variables de configuración
         msg = f"🏠 *{len(nuevos)} Rentas nuevas - {LOCATION.capitalize()}*\n"
