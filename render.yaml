@@ -10,6 +10,6 @@ services:
         value: 3.11.9  # <--- Esta es la línea mágica que soluciona el error
       - key: TOKEN
         value: os.getenv("TOKEN")
-      - key: os.getenv("CHAT_ID")
-        value: 6456127410
+      - key: CHAT_ID
+        value: os.getenv("CHAT_ID")
     autoDeploy: false
