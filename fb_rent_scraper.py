@@ -23,7 +23,7 @@ def send_telegram(text):
         "parse_mode": "Markdown",
         "disable_web_page_preview": True
     }
-try:
+    try:
         requests.post(url, data=payload, timeout=10)
     except Exception as e:
         print(f"Telegram error: {e}")
