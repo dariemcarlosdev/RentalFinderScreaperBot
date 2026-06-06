@@ -5,7 +5,7 @@
 ![Telegram](https://img.shields.io/badge/Telegram-Integrated-2CA5E0)
 ![AI Automation](https://img.shields.io/badge/AI-Automation-purple)
 
-RentalFinderScreaperBot is a small Python automation project that uses AI-assisted workflows to help streamline the process of finding rental listings, collect relevant property information, and support notifications through Telegram integration for faster review.
+Rental FinderScreaper Bot is a small Python automation project that uses AI-assisted workflows to help streamline the process of finding rental listings, collect relevant property information, and support notifications through Telegram integration for faster review.
 
 ## ✨ Features
 
