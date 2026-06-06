@@ -54,7 +54,18 @@ def search_rentals():
     new_listings = []
     with sync_playwright() as p:
         # 🌐 A MUST FOR RENDER: headless=True
-        browser = p.chromium.launch(headless=True, args=["--lang=en-US"])
+        try:
+            browser = p.chromium.launch(headless=True, args=["--lang=en-US"])
+        except Exception as e:
+            if "Executable doesn't exist" in str(e):
+                print("Chromium no encontrado en la ruta persistente. Instalando ahora mismo...")
+                import subprocess
+                subprocess.run(["playwright", "install", "chromium"], check=True)
+                # Reintentamos lanzar el navegador ahora que ya está instalado
+                browser = p.chromium.launch(headless=True, args=["--lang=en-US"])
+            else:
+                raise e
+
         if os.path.exists("fb_session.json"):
             context = browser.new_context(storage_state="fb_session.json", locale="en-US")
         else:
