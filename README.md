@@ -1,22 +1,24 @@
 # RentalFinderScreaperBot
 
-RentalFinderScreaperBot is a small Python automation project that uses AI-assisted workflows to help streamline the process of finding rental listings and collecting relevant information for faster review.
+RentalFinderScreaperBot is a small Python automation project that uses AI-assisted workflows to help streamline the process of finding rental listings, collect relevant property information, and support notifications through Telegram integration for faster review.
 
-## Features
+## ✨ Features
 
 - Automates parts of the rental listing search workflow
 - Helps collect and organize relevant rental information
+- Supports Telegram integration for notifications and updates
 - Built in Python for simple customization and extension
 - Supports AI-assisted automation use cases
 
-## Requirements
+## ⚙️ Requirements
 
 - Python 3.10 or newer
 - pip
 - Internet connection
+- Telegram bot credentials for integration features
 - Any project-specific dependencies listed in `requirements.txt`
 
-## Installation
+## 🚀 Installation
 
 1. Clone the repository:
 
@@ -54,11 +56,12 @@ RentalFinderScreaperBot is a small Python automation project that uses AI-assist
    pip install -r requirements.txt
    ```
 
-## Usage
+## ▶️ Usage
 
 1. Make sure your virtual environment is activated.
-2. Configure any required environment variables or credentials.
+2. Configure any required environment variables, API keys, or Telegram bot credentials.
 3. Run the main Python script for the bot.
+4. Receive or send updates through your Telegram integration workflow.
 
 Example:
 
@@ -67,3 +70,7 @@ python main.py
 ```
 
 > Replace `main.py` with the actual entry-point script used in this project.
+
+## 👨‍💻 Creator
+
+Created by **Dariem Carlos Macias Mora**.
